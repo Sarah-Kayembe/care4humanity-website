@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>News & Events | Care For Humanity</title>
+  <meta name="description" content="Upcoming events, news and key dates for Care For Humanity in Botswana: search, filter and add events to your calendar.">
+  <meta name="keywords" content="Care For Humanity, CFH, charity, Botswana, Gaborone, youth, volunteering, donations">
+  <meta property="og:title" content="News & Events | Care For Humanity">
+  <meta property="og:description" content="Upcoming events, news and key dates for Care For Humanity in Botswana: search, filter and add events to your calendar.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#B1BC8D">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" type="image/png">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Roboto:wght@400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Website Name: Care For Humanity
+  * Updated: October 2026
+  * Author: Sarah Kayembe
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <!-- Left Navigation -->
+      <nav id="navbar-left" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="timelines.html">News &amp; Events</a></li>
+        </ul>
+      </nav>
+
+      <!-- Central Logo: full logo at the top, hand badge when scrolled and on phones -->
+      <div class="logo">
+        <a href="index.html" class="logo-link" aria-label="Care For Humanity home">
+          <img src="assets/img/logo-wordmark.png" alt="Care For Humanity" class="logo-full" width="400" height="167">
+          <span class="logo-badge"><img src="assets/img/logo-hand.png" alt="" width="174" height="189"></span>
+        </a>
+      </div>
+
+      <!-- Right Navigation -->
+      <nav id="navbar-right" class="navbar">
+        <ul>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-donate"><a href="donate.html">Donate</a></li>
+        </ul>
+      </nav>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+    <section class="page-hero" style="background-image: url('assets/img/photos/volunteers-clearing-plants.webp');">
+      <div class="container" data-aos="fade-up">
+        <h1>News &amp; Events</h1>
+        <p>What’s coming up, what’s new, and the moments that shaped us.</p>
+      </div>
+    </section>
+
+  <main id="main">
+
+    <section class="ev-intro">
+      <div class="container">
+        <div class="section-title kicker-title" data-aos="fade-up">
+          <span class="kicker">Events &amp; activities</span>
+          <h2>Moments Worth Gathering For</h2>
+          <p>A blanket packing day before winter. A morning clearing invasive plants at Mokolodi. A bake sale, a tutoring session, a Gala Night to celebrate the team. Here is everything coming up with Care for Humanity, and the moments we have shared so far.</p>
+        </div>
+        <div id="ev-spotlight" class="ev-spotlight" data-aos="fade-up"></div>
+      </div>
+    </section>
+
+    <section id="ev-featured" class="pt-0">
+      <div class="container">
+        <div class="section-title kicker-title" data-aos="fade-up">
+          <span class="kicker">Dive right in</span>
+          <h2>Featured Events</h2>
+          <p>Our next chances to get involved. <strong>Dates and times can change, so check back or follow us on Instagram before you go.</strong></p>
+        </div>
+        <div id="ev-featured-grid" class="row"></div>
+      </div>
+    </section>
+
+    <section id="all-events" class="ev-all">
+      <svg class="ev-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C160,0 320,0 480,40 C640,80 800,80 960,40 C1120,0 1280,0 1440,40 L1440,90 L0,90 Z"/></svg>
+      <div class="container">
+        <div class="section-title kicker-title" data-aos="fade-up">
+          <span class="kicker">Plan ahead</span>
+          <h2>All Events</h2>
+          <p>Browse everything we have planned, from this weekend to next year, and look back at past events.</p>
+        </div>
+      </div>
+      <div class="ev-cats-band">
+        <div class="container ev-cats-wrap">
+          <button type="button" id="ev-cats-prev" class="ev-cats-arrow" aria-label="Scroll categories left"><i class="bx bx-chevron-left"></i></button>
+          <div id="ev-cats" class="ev-cats" role="group" aria-label="Filter by category"></div>
+          <button type="button" id="ev-cats-next" class="ev-cats-arrow" aria-label="Scroll categories right"><i class="bx bx-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="ev-toolbar">
+          <div class="tb-row">
+            <button type="button" id="ev-filter-toggle" class="tb-filter" aria-expanded="true"><i class="bx bx-filter-alt"></i> Filters</button>
+            <label class="ev-searchbox"><i class="bx bx-search"></i><input id="ev-search" type="search" placeholder="Search events" aria-label="Search events"></label>
+          </div>
+          <div class="tb-row tb-controls">
+            <div class="tb-group">
+              <span class="tb-label">Show</span>
+              <div class="seg" role="group" aria-label="Show">
+                <button type="button" class="seg-btn" data-period="upcoming"><i class="bx bx-calendar-event"></i> Upcoming</button>
+                <button type="button" class="seg-btn" data-period="past"><i class="bx bx-history"></i> Past</button>
+                <button type="button" class="seg-btn" data-period="all"><i class="bx bx-list-ul"></i> All</button>
+              </div>
+            </div>
+            <div class="tb-group">
+              <span class="tb-label">Sort</span>
+              <div class="seg" role="group" aria-label="Sort">
+                <button type="button" class="seg-btn" data-sort="date"><i class="bx bx-calendar"></i> Date</button>
+                <button type="button" class="seg-btn" data-sort="title"><i class="bx bx-sort-a-z"></i> A to Z</button>
+              </div>
+            </div>
+            <div class="tb-group">
+              <span class="tb-label">View</span>
+              <div class="seg" role="group" aria-label="View">
+                <button type="button" class="seg-btn" data-view="grid"><i class="bx bx-grid-alt"></i> Grid</button>
+                <button type="button" class="seg-btn" data-view="calendar"><i class="bx bx-calendar"></i> Calendar</button>
+                <button type="button" class="seg-btn" data-view="map"><i class="bx bx-map"></i> Map</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ev-layout">
+          <aside class="ev-filters" aria-label="Filters">
+            <h3>Filters</h3>
+            <div class="f-block">
+              <h4>Show events for</h4>
+              <div class="f-dates">
+                <label><span>Start date</span><input type="date" id="ev-start"></label>
+                <label><span>End date</span><input type="date" id="ev-end"></label>
+              </div>
+            </div>
+            <div class="f-block">
+              <h4>Location</h4>
+              <div id="ev-locations"></div>
+            </div>
+            <button type="button" id="ev-reset" class="f-reset">Reset filters</button>
+          </aside>
+          <div class="ev-results">
+            <p id="ev-count" class="ev-count" aria-live="polite"></p>
+            <div id="ev-grid"></div>
+            <div class="text-center"><button type="button" id="ev-more" class="btn-outline-sage mt-3" hidden>Load more events</button></div>
+            <div id="ev-cal" class="ev-bigcal" hidden></div>
+            <div id="ev-map" class="ev-mapview" hidden></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-out">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Get Involved</h3>
+            <p> At Care for Humanity, we offer humanitarian aid while also fostering a sense of community and shared interests. </p>
+            <p> Interested in participating or contributing in our activities but unsure where to begin? Explore the opportunities listed!</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="contact.html?topic=Volunteer">Join our community</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <section id="instagram">
+      <div class="container">
+        <div class="section-title kicker-title" data-aos="fade-up">
+          <span class="kicker">On Instagram</span>
+          <h2>Latest News</h2>
+          <p>Fresh from <a href="https://www.instagram.com/care4humanity_/" target="_blank" rel="noopener">@care4humanity_</a> and our partners.</p>
+        </div>
+        <!--
+          To add an Instagram post, paste its link at the START of this list (newest first),
+          separated by commas. The first 6 show straight away; the rest appear with "Show more posts".
+        -->
+        <div class="ig-feed" data-show="6" data-posts="https://www.instagram.com/reel/DasZyGbsGHQ/, https://www.instagram.com/p/DTm8zD1DAnA/, https://www.instagram.com/p/DO5iiS_DDqy/, https://www.instagram.com/p/DO5ibeljDK8/, https://www.instagram.com/p/DKZrXCKM23k/, https://www.instagram.com/p/DKZqxhHMat4/, https://www.instagram.com/p/DARTZcjs5al/, https://www.instagram.com/p/C_QQlznskhX/, https://www.instagram.com/p/C_FglIEsNon/, https://www.instagram.com/reel/C_Ff922Mu_H/"></div>
+        <div class="text-center mt-4">
+          <button type="button" class="btn-outline-sage ig-more" hidden>Show more posts</button>
+          <a href="https://www.instagram.com/care4humanity_/" target="_blank" rel="noopener" class="btn-orange d-inline-block ms-2">Follow us on Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title kicker-title" data-aos="fade-up">
+          <span class="kicker">Since 2019</span>
+          <h2>Our Story in Dates</h2>
+        </div>
+        <div class="timeline">
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-date">2019</div>
+          <h4>Care for Humanity begins</h4>
+          <p>Afreen Dhansay starts Care for Humanity as a place for young people to serve their community.</p>
+          <img src="assets/img/photos/../gallery/student2.webp" class="img-fluid" alt="CFH Founder and students gathered for tuition" loading="lazy">
+          <div class="ig-slot" data-ig=""></div>
+        </div>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-date">2021</div>
+          <h4>A volunteer is crowned</h4>
+          <p>CFH volunteer Gimhani Mohau Perera is crowned Miss Teen International Botswana 2021.</p>
+          <img src="assets/img/photos/gimhani-airport.webp" class="img-fluid" alt="Gimhani Mohau Perera with the flag of Botswana at the airport" loading="lazy">
+          <div class="ig-slot" data-ig=""></div>
+        </div>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-date">July 2022</div>
+          <h4>Representing Africa</h4>
+          <p>Gimhani represents Africa at Miss Teen International 2022, placing in the Top 10 and winning the People's Choice Award.</p>
+          <img src="assets/img/photos/gimhani-africa-stage.webp" class="img-fluid" alt="Gimhani on stage with the flag of Botswana and an Africa sash" loading="lazy">
+          <a class="tl-more" href="event.html?id=gimhani-mohau-perera-represents-africa-at-miss-teen-international-2022-20220730">Read more <i class="bi bi-arrow-right"></i></a>
+          <div class="ig-slot" data-ig=""></div>
+        </div>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-date">19 November 2022</div>
+          <h4>Celebrated with Ditshwanelo</h4>
+          <p>At a celebration of the work of Care for Humanity in Gaborone, our founder is joined by Ms Alice Mogwe, Director of Ditshwanelo, The Botswana Centre for Human Rights.</p>
+          <img src="assets/img/photos/founder-ditshwanelo-2022.webp" class="img-fluid" alt="Afreen Dhansay with Alice Mogwe" loading="lazy">
+          <a class="tl-more" href="event.html?id=celebrating-the-work-of-care-for-humanity-with-ditshwanelo-20221119">Read more <i class="bi bi-arrow-right"></i></a>
+          <div class="ig-slot" data-ig=""></div>
+        </div>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-date">May 2023</div>
+          <h4>A borehole for Digawana</h4>
+          <p>We hand over our borehole donation at Nthwalang Junior Secondary School, bringing reliable water to the school and the Digawana community. The Daily News covered the handover on 24 May 2023.</p>
+          <img src="assets/img/photos/daily-news-borehole-2023.webp" class="img-fluid" alt="Daily News photo of the borehole handover" loading="lazy">
+          <a class="tl-more" href="event.html?id=our-borehole-donation-in-the-daily-news-20230524">Read more <i class="bi bi-arrow-right"></i></a>
+          <div class="ig-slot" data-ig=""></div>
+        </div>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-date">4 October 2023</div>
+          <h4>We are registered</h4>
+          <p>CFH is officially incorporated as a registered non-profit organization. A special thank you to Akheel Jinabhai &amp; Associates and Push Outsourcing for their services and support.</p>
+          <img src="assets/img/photos/registration-announcement.webp" class="img-fluid" alt="Announcement that Care For Humanity is a registered non-profit" loading="lazy">
+          <a class="tl-more" href="event.html?id=care-for-humanity-is-officially-registered-20231004">Read more <i class="bi bi-arrow-right"></i></a>
+          <div class="ig-slot" data-ig=""></div>
+        </div>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-date">November 2023</div>
+          <h4>Annual Gala Dinner</h4>
+          <p>We close out 2023 at our Annual Gala Dinner, honoring the team members whose efforts made the year a success.</p>
+          <img src="assets/img/photos/gala-2023-team.webp" class="img-fluid" alt="The team at the Annual Gala Dinner 2023" loading="lazy">
+          <a class="tl-more" href="event.html?id=thank-you-for-our-annual-gala-dinner-2023-20231130">Read more <i class="bi bi-arrow-right"></i></a>
+          <div class="ig-slot" data-ig=""></div>
+        </div>
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-date">December 2023</div>
+          <h4>A new medical partner</h4>
+          <p>We attend the opening of Dr. Claude's clinic, a partner we worked with on several initiatives that year.</p>
+          <img src="assets/img/photos/clinic-opening-2023.webp" class="img-fluid" alt="At the opening of Dr. Claude's clinic" loading="lazy">
+          <a class="tl-more" href="event.html?id=opening-of-dr-claude-s-clinic-20231208">Read more <i class="bi bi-arrow-right"></i></a>
+          <div class="ig-slot" data-ig=""></div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-bg">
+      <div class="container">
+        <div class="section-title kicker-title" data-aos="fade-up">
+          <span class="kicker">Proud moments</span>
+          <h2>Moments Along the Way</h2>
+          <p>Projects we are proud of.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+            <div class="group-card">
+              <img src="assets/img/photos/borehole-ceremony.webp" class="img-fluid" alt="Borehole handover ceremony" loading="lazy">
+              <div class="body">
+                <h4>Borehole handover</h4>
+                <p>Our donated borehole is handed over at Nthwalang Junior Secondary School in Digawana Village, as covered by the Daily News.</p>
+                <div class="ig-slot" data-ig=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+            <div class="group-card">
+              <img src="assets/img/photos/project-warmth.webp" class="img-fluid" alt="Blankets packed in red bags" loading="lazy">
+              <div class="body">
+                <h4>Project Warmth</h4>
+                <p>Blankets packed and delivered one by one as winter approaches.</p>
+                <div class="ig-slot" data-ig=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+            <div class="group-card">
+              <img src="assets/img/photos/../gallery/com1.webp" class="img-fluid" alt="Team packing food hampers" loading="lazy">
+              <div class="body">
+                <h4>80 food hampers</h4>
+                <p>The team packs and delivers 80 food hampers for families in Old Naledi.</p>
+                <div class="ig-slot" data-ig=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+            <div class="group-card">
+              <img src="assets/img/photos/../gallery/com4.webp" class="img-fluid" alt="Volunteers carrying hygiene care packs" loading="lazy">
+              <div class="body">
+                <h4>Care packs for Mahalapye</h4>
+                <p>Hygiene care packs for the ladies at Mahalapye District Hospital.</p>
+                <div class="ig-slot" data-ig=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+            <div class="group-card">
+              <img src="assets/img/photos/volunteers-clearing-plants.webp" class="img-fluid" alt="Two volunteers pulling out invasive plants" loading="lazy">
+              <div class="body">
+                <h4>World Wildlife Day</h4>
+                <p>Gimhani and fellow volunteers clearing invasive plants at Mokolodi so grass can grow for the animals.</p>
+                <div class="ig-slot" data-ig=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+            <div class="group-card">
+              <img src="assets/img/photos/../gallery/com3.webp" class="img-fluid" alt="Blood donation" loading="lazy">
+              <div class="body">
+                <h4>Blood donation drive</h4>
+                <p>Volunteers giving blood and spreading the word about health.</p>
+                <div class="ig-slot" data-ig=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v-44h-352z" />
+      </defs>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="0" fill="#fff" />
+      </g>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="9" fill="rgba(255,255,255, .1)" />
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="6" fill="rgba(255,255,255, .2)" />
+      </g>
+    </svg>
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Our CFH Newsletter</h4>
+            <p>Get the latest updates about CFH and be the first to hear about our events.</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="#" method="post">
+              <input type="email" name="email" placeholder="Your email address" aria-label="Your email address" required><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="projects.html">Projects</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="timelines.html">News &amp; Events</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="team.html">Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="donate.html">Donate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="projects.html#communities">Community Outreach</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="projects.html#students">Education &amp; Tutoring</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="projects.html#health">Health Awareness Campaigns</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="projects.html#wildlife">Environmental Conservation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="projects.html#food-relief">Resource Distribution</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Gaborone, Botswana<br><br>
+              <strong>Phone:</strong> <a href="tel:+26771605599">+267 71 605 599</a><br>
+              <strong>Email:</strong> <a href="mailto:admin@careforhumanity.co.bw">admin@careforhumanity.co.bw</a><br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About Care For Humanity</h3>
+            <p>Care for Humanity, founded by Afreen Dhansay in 2019 and registered in 2023, empowers youth through humanitarian initiatives. Inspired by her family's commitment to service, Afreen established a platform for young individuals to navigate life's challenges while fostering appreciation for their communities. The organization promotes growth, education, and support, making a positive impact on lives.</p>
+            <div class="social-links mt-3">
+              <a href="https://www.tiktok.com/@care4humanity_" class="tiktok" target="_blank" rel="noopener" aria-label="TikTok"><i class="bx bxl-tiktok"></i></a>
+              <a href="https://www.facebook.com/Care4humanitybw/" class="facebook" target="_blank" rel="noopener" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/care4humanity_/" class="instagram" target="_blank" rel="noopener" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Care For Humanity</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed &amp; developed by <strong><span>Sarah Kayembe</span></strong>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/events-data.js"></script>
+  <script src="assets/js/events-core.js"></script>
+  <script src="assets/js/events-page.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

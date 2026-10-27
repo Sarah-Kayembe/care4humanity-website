@@ -1,0 +1,86 @@
+CARE FOR HUMANITY: SETTING UP THE EVENTS FORM (one time, about 15 minutes)
+==========================================================================
+
+After this setup, the team posts events and news on the website by filling in
+a Google Form. Nobody needs to touch the website code again.
+
+How it works
+  Google Form  ->  Google Sheet ("Events" tab)  ->  News & Events page
+
+Do this from the CARE FOR HUMANITY Google account, not a personal account,
+so the form, the sheet and the photos belong to the organization.
+(If CFH has no Google account yet, create a free Gmail account for it first.)
+
+
+STEP 1: CREATE THE FORM AND SHEET
+---------------------------------
+1. Signed in to the CFH Google account, go to  script.google.com
+2. Click "New project". At the top, rename it "CFH Events Form".
+3. Delete the sample code. Open _setup/CFH-Events-Form.gs from the website
+   folder, copy everything, paste it in, and press Ctrl+S (Cmd+S on Mac).
+4. In the toolbar, choose  setup  in the function dropdown and click Run.
+5. Google asks for permission:
+   Review permissions > choose the CFH account > "Google hasn't verified this app"
+   > Advanced > Go to CFH Events Form (unsafe) > Allow.
+   (This warning is normal for scripts you write yourself.)
+6. When it finishes, the "Execution log" at the bottom shows three links:
+   the form for the team, the link to edit the form, and the Google Sheet.
+   Keep this tab open. You can see the links again any time by running
+   showLinks the same way.
+
+
+STEP 2: ADD THE TWO PHOTO QUESTIONS (Google does not let scripts add these)
+--------------------------------------------------------------------------
+1. Open the "Edit the form questions" link.
+2. Scroll to the bottom, click the + (Add question) button, and change the
+   question type to "File upload". Google shows a notice: click Continue.
+3. Question title, written exactly:  Main photo
+   - Turn on "Allow only specific file types" and tick Image
+   - Maximum number of files: 1
+   - Maximum file size: 10 MB
+4. Add one more File upload question, titled exactly:  More photos
+   - Image only, maximum number of files: 10, maximum file size: 10 MB
+5. If you see a "Publish" button at the top of the form, click it.
+
+
+STEP 3: CONNECT THE SHEET TO THE WEBSITE
+----------------------------------------
+1. Open the Google Sheet link.
+2. File > Share > Publish to web.
+3. In the first box choose "Events" (not "Entire document").
+   In the second box choose "Comma-separated values (.csv)".
+4. Click Publish, confirm, and copy the link it shows.
+5. In the website folder, open  assets/js/events-data.js  and paste the link
+   between the quotes on this line:
+       window.CFH_EVENTS_SHEET = ''
+6. Save, then redeploy the website (for example, push to Vercel).
+   This is the last time the code needs to change.
+
+
+STEP 4: GIVE THE TEAM ACCESS
+----------------------------
+1. Send the team the form link (it is also in the "How to use" tab of the sheet).
+   They need a Google account to post, because the form accepts photo uploads.
+2. Optional but recommended: in the "Team" tab, list the Google email addresses
+   allowed to post. Posts from anyone else arrive hidden until approved.
+3. Give one or two trusted people "Editor" access to the sheet (Share button)
+   so they can fix mistakes or hide posts.
+
+
+STEP 5: TEST IT
+---------------
+1. Fill in the form with a test event and a photo.
+2. Within about 5 minutes it appears on the News & Events page.
+   (Google updates the published sheet every few minutes.)
+3. Hide it again by typing  yes  in the "hidden" column of the Events tab.
+
+
+GOOD TO KNOW
+------------
+- Photos are stored in the CFH Google Drive (in a folder named after the form)
+  and are shared as "anyone with the link can view" so the website can show them.
+- If someone pastes a Google Drive photo link straight into the sheet and it does
+  not show, run  sharePhotosInSheet  in the script editor (same way as setup).
+- The news items already written in assets/js/events-data.js still show on the website.
+  New events should go through the form.
+- Everything here is free: Google Forms, Sheets, Drive and Apps Script.
