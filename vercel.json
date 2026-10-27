@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/timelines", "destination": "/news-and-events", "permanent": true },
+    { "source": "/timelines.html", "destination": "/news-and-events", "permanent": true }
+  ]
+}

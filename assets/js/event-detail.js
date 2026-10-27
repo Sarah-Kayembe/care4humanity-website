@@ -20,7 +20,7 @@
       hero.querySelector('h1').textContent = 'Event not found'
       hero.querySelector('p').textContent = 'It may have been moved or removed.'
       root.innerHTML = `<div class="ev-empty"><i class="bx bx-calendar-x"></i><h4>We couldn't find that event</h4>
-        <p>Have a look at everything that's coming up instead.</p><a class="btn-orange d-inline-block" href="timelines.html#all-events">See all events</a></div>`
+        <p>Have a look at everything that's coming up instead.</p><a class="btn-orange d-inline-block" href="news-and-events.html#all-events">See all events</a></div>`
       return
     }
     document.title = e.title + ' | Care For Humanity'
@@ -38,7 +38,7 @@
     const moreList = more.length ? more : events.filter(x => x.id !== e.id).slice(-3).reverse()
 
     root.innerHTML = `
-      <nav class="ev-crumbs" aria-label="Breadcrumb"><a href="timelines.html">News &amp; Events</a> <i class="bx bx-chevron-right"></i> <span>${esc(e.title)}</span></nav>
+      <nav class="ev-crumbs" aria-label="Breadcrumb"><a href="news-and-events.html">News &amp; Events</a> <i class="bx bx-chevron-right"></i> <span>${esc(e.title)}</span></nav>
       <div class="row">
         <div class="col-lg-7 mb-5">
           <h2 class="ev-h">About</h2>
@@ -77,7 +77,7 @@
       </div>
       ${moreList.length ? `<div class="ev-more-wrap"><h2 class="ev-h text-center mb-4">${more.length ? 'More Upcoming Events' : 'More From Care for Humanity'}</h2>
         <div class="row">${moreList.map(x => `<div class="col-md-6 col-lg-4 mb-4">${E.card(x)}</div>`).join('')}</div>
-        <div class="text-center"><a class="btn-outline-sage" href="timelines.html#all-events">See all events</a></div></div>` : ''}`
+        <div class="text-center"><a class="btn-outline-sage" href="news-and-events.html#all-events">See all events</a></div></div>` : ''}`
 
     if (e.signup && !past) addSignupModal(e)
     const ics = root.querySelector('.ev-ics'); if (ics) ics.addEventListener('click', () => E.downloadIcs(e))

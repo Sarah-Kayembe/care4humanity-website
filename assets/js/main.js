@@ -93,9 +93,10 @@
    * Build one combined menu for phones from the left and right navs,
    * and highlight the link for the current page
    */
-  const page = (location.pathname.split('/').pop() || 'index.html').toLowerCase()
+  const pageName = p => (p.split('/').pop() || 'index').toLowerCase().replace(/\.html$/, '')
+  const page = { event: 'news-and-events' }[pageName(location.pathname)] || pageName(location.pathname)  // single events belong to News & Events
   select('#navbar-left a, #navbar-right a', true).forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href').toLowerCase() === page)
+    a.classList.toggle('active', pageName(a.getAttribute('href')) === page)
   })
   const headerContainer = select('#header .container')
   if (headerContainer && !select('#navbar')) {
