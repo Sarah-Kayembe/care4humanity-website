@@ -3030,7 +3030,8 @@ h5 {
 /*--------------------------------------------------------------
 # Site completion (Oct 2026): inner pages, mobile nav, new sections
 --------------------------------------------------------------*/
-html, body { overflow-x: hidden; }
+#hero, #main, #footer { overflow-x: clip; }
+@supports not (overflow-x: clip) { #hero, #main, #footer { overflow-x: hidden; } }
 img { max-width: 100%; height: auto; }
 
 /* Combined mobile menu (built by main.js from the left + right navs) */
