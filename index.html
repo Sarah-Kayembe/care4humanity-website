@@ -544,6 +544,84 @@
       </div>
     </section><!-- End Testimonials Section -->
 
+    <!-- ======= Leave a Note Section ======= -->
+    <section id="notes" class="notes-wall">
+      <div class="container">
+
+        <div class="section-title kicker-title" data-aos="fade-up">
+          <span class="kicker">Leave a note</span>
+          <h2>Notes for the Team</h2>
+          <p>Cheer our volunteers on, say thank you, or tell us what you think of the website.</p>
+        </div>
+
+        <div class="text-center mb-4">
+          <button type="button" class="btn-orange" data-bs-toggle="modal" data-bs-target="#noteModal"><i class="bx bx-pencil"></i> Leave a note</button>
+        </div>
+
+        <div id="notes-board" class="notes-board" aria-live="polite"></div>
+        <div class="text-center mt-4"><button type="button" id="notes-more" class="btn-outline-sage" hidden>See more notes</button></div>
+
+      </div>
+    </section><!-- End Leave a Note Section -->
+
+    <!-- Leave a note popup -->
+    <div class="modal fade" id="noteModal" tabindex="-1" aria-labelledby="noteTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content signup-modal">
+          <div class="modal-header">
+            <div>
+              <span class="kicker">Leave a note</span>
+              <h3 class="modal-title" id="noteTitle">Write a note for the team</h3>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="note-form" class="contact-form note-form" novalidate>
+              <div class="row g-4">
+                <div class="col-md-7">
+                  <label class="form-label" for="note-name">Your name <span class="note-optional">(optional)</span></label>
+                  <input id="note-name" name="name" type="text" class="form-control" maxlength="40" autocomplete="given-name" placeholder="First name is fine">
+
+                  <fieldset class="mt-3">
+                    <legend class="form-label">What kind of note?</legend>
+                    <div class="note-types">
+                      <label><input type="radio" name="type" value="Encouragement" checked><span><i class="bx bx-heart"></i> Encouragement</span></label>
+                      <label><input type="radio" name="type" value="Feedback on the website"><span><i class="bx bx-laptop"></i> Website feedback</span></label>
+                      <label><input type="radio" name="type" value="Message for the team"><span><i class="bx bx-envelope"></i> For the team</span></label>
+                    </div>
+                  </fieldset>
+
+                  <label class="form-label mt-3" for="note-message">Your note</label>
+                  <textarea id="note-message" name="message" rows="4" class="form-control" maxlength="300" required placeholder="Keep up the amazing work!"></textarea>
+                  <div class="note-count" id="note-count" aria-live="polite">0 / 300</div>
+
+
+                  <div class="form-check mt-3">
+                    <input class="form-check-input" type="checkbox" id="note-public" name="public" checked>
+                    <label class="form-check-label" for="note-public">Show my note on the website</label>
+                  </div>
+
+                  <!-- Leave empty. Only bots fill this in. -->
+                  <input type="text" name="website" class="note-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                </div>
+
+                <div class="col-md-5">
+                  <p class="form-label mb-2">Preview</p>
+                  <div id="note-preview" class="note-preview"></div>
+                  <p class="note-rules">Notes are checked for bad language and links before they go up. The team can remove any note.</p>
+                </div>
+
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn-orange">Post my note</button>
+                  <p id="note-status" class="form-status" role="status" aria-live="polite"></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container">
@@ -778,6 +856,8 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
+  <script src="assets/js/events-data.js"></script>
+  <script src="assets/js/notes.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
